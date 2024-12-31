@@ -12,17 +12,17 @@ const client = new OAuth2Client("1098238898472-he2l97jflu50j4sn82ro2bu44nc7rkja.
 
 // Allow all origins
 app.use(cors());
+const corsOptions = {
+    origin: process.env.NODE_ENV === 'production' ?
+        ['https://your-production-domain.com'] // Replace with your production URL
+        :
+        ['http://localhost:5173'], // Development URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Define allowed methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Define allowed headers
+    credentials: true, // Enable credentials if needed
+};
 
-app.use(cors({
-    origin: 'http://localhost:5173', // Ensure this is the correct URL for your frontend
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-}));
-app.use((req, res, next) => {
-    res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
-    res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
-    next();
-});
+app.use(cors(corsOptions));
 
 
 app.get("/", (req, res) => {
