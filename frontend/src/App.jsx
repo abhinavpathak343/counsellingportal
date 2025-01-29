@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home"; // Adjust path as necessary
 import Login from "./pages/Login/Login.jsx";
-import AdminLogin from "./pages/Login/adminlogin.jsx"; // Corrected AdminLogin import
+import AdminLogin from "./pages/Login/AdminLogin.jsx"; // Corrected AdminLogin import
 import StudentForm from "./pages/main/StudentForm.jsx"; // Import the form
 import AdminPanel from "./pages/main/AdminPanel.jsx"; // Import the form
 import Signup from "./pages/Signup/Signup.jsx"; // Import Signup component
