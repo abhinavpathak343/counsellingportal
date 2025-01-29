@@ -9,12 +9,13 @@ const {
     OAuth2Client
 } = require("google-auth-library");
 const client = new OAuth2Client("1098238898472-he2l97jflu50j4sn82ro2bu44nc7rkja.apps.googleusercontent.com"); // Use the same client ID as in your frontend
+const path = require('path');
+const _dirname = path.resolve();
 
 // Allow all origins
 app.use(cors());
 const corsOptions = {
-    origin: process.env.NODE_ENV === 'production' ?
-        ['https://your-production-domain.com'] // Replace with your production URL
+    origin: process.env.NODE_ENV === 'production' ? ['https://your-production-domain.com'] // Replace with your production URL
         :
         ['http://localhost:5173'], // Development URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Define allowed methods
@@ -25,9 +26,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 
-app.get("/", (req, res) => {
-    res.send("CORS enabled for all origins");
-});
+
 
 const {
     authenticateJwt
@@ -525,7 +524,11 @@ app.post("/google-auth", async (req, res) => {
         });
     }
 });
+app.use(express.static(path.join(_dirname, "/frontend/dist")));
 
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html"));
+});
 
 // Server Listening
 app.listen(8000, () => {
