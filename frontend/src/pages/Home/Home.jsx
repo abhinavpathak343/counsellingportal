@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/Button'; // Adjust the import path
+import { Button } from '@/components/ui/Button.jsx'; // Adjust the import path
 import Students from "../../assets/students.jpg";
 
 const Home = () => {
