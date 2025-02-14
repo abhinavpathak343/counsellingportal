@@ -104,7 +104,7 @@ export default function AdminLoginPage() {
                     disabled={isLoading}
                     className="bg-gray-700 border-gray-600 text-gray-100 focus:ring-blue-500 focus:border-blue-500"
                   />
-                  <button
+                  <Button
                     type="button"
                     onClick={togglePasswordVisibility}
                     className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-200"
@@ -114,7 +114,7 @@ export default function AdminLoginPage() {
                     ) : (
                       <Eye className="h-5 w-5" aria-hidden="true" />
                     )}
-                  </button>
+                  </Button>
                 </div>
               </div>
 
