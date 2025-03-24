@@ -1,42 +1,33 @@
-Counseling Management System 🎓
+🎓 Counseling Management System
 📌 Overview
-The Counseling Management System is a full-stack web application built using the MERN stack (MongoDB, Express.js, React, Node.js). This platform facilitates a centralized counseling process, allowing students to register, select their preferred branches, and get branch assignments based on their rank.
+The Counseling Management System is a full-stack web application built with the MERN stack (MongoDB, Express.js, React, Node.js). This platform streamlines the student counseling process, allowing students to register, choose their preferred branches, and receive branch assignments based on their rank.
 
-The admin manages student registrations, ranks students, assigns branches, and provides real-time updates. The system also includes Google Authentication for secure access.
+🔹 For Students: Secure authentication, branch selection, and instant updates.
+🔹 For Admins: Student ranking, branch allocation, and offer letter generation.
 
-🚀 Features
+The system integrates Google Authentication to ensure a secure and seamless user experience.
+
+🚀 Key Features
 🧑‍🎓 Student Features
-Secure Authentication using Google Login
-
-Preference Selection for branches
-
-View Assigned Branch after admin allocation
-
-Real-time Notifications on branch assignment
+✅ Google Authentication – Secure login with Google
+✅ Branch Preference Selection – Choose desired branches
+✅ Real-Time Notifications – Get instant updates on branch allocation
+✅ View Assigned Branch – See your final allocation after admin approval
 
 🛠️ Admin Features
-View and Manage Student Data
-
-Assign Branches based on rank & preference
-
-Generate Offer Letters
-
-Dashboard with Student Ranking
+✅ Manage Student Data – View and handle student registrations
+✅ Rank-Based Branch Assignment – Allocate branches based on student rank & preference
+✅ Generate Offer Letters – Auto-generate offer letters for students
+✅ Dashboard & Student Ranking – View and manage rankings efficiently
 
 🛠️ Tech Stack
-Frontend (React)
-React.js – For a responsive UI
+🎨 Frontend (React.js)
+🚀 React.js – For a dynamic & responsive UI
+🎨 Material-UI (MUI) – Modern & stylish UI components
+🔗 Recoil – Efficient state management
 
-Material-UI (MUI) – For modern UI components
+🔧 Backend (Node.js & Express.js)
+⚡ Express.js – Fast & scalable API development
+📦 MongoDB & Mongoose – Database for managing student data
+🔑 Google OAuth 2.0 – Secure authentication via Google
 
-Recoil – For state management
-
-
-
-Backend (Node.js & Express)
-Express.js – API development
-
-MongoDB & Mongoose – Database for storing students & preferences
-
-
-Google OAuth 2.0 – Authentication using Google
